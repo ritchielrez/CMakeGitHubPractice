@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/dev/c_cpp/CMakeProject1/include/header.cpp
+header.h
+/mnt/c/dev/c_cpp/CMakeProject1/include/header.h
+
+/mnt/c/dev/c_cpp/CMakeProject1/include/header.h
+iostream
+-
+string
+-
+

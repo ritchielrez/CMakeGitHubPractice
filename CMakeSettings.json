@@ -1,0 +1,17 @@
+﻿{
+  "configurations": [
+    {
+      "buildCommandArgs": "-v",
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "cmakeCommandArgs": "",
+      "configurationType": "RelWithDebInfo",
+      "ctestCommandArgs": "",
+      "generator": "Visual Studio 15 2017",
+      "inheritEnvironments": [
+        "msvc_x86"
+      ],
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "name": "x86-Release"
+    }
+  ]
+}

@@ -121,16 +121,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -143,16 +133,26 @@ install/fast: preinstall/fast
 	/usr/local/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/c_cpp/CMakeProject1/build/linux/CMakeFiles /mnt/c/dev/c_cpp/CMakeProject1/build/linux//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /mnt/c/dev/c_cpp/CMakeProject1/build/linux && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/c_cpp/CMakeProject1/build/linux/CMakeFiles /mnt/c/dev/c_cpp/CMakeProject1/build/linux/bin//CMakeFiles/progress.marks
+	cd /mnt/c/dev/c_cpp/CMakeProject1/build/linux && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/dev/c_cpp/CMakeProject1/build/linux/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /mnt/c/dev/c_cpp/CMakeProject1/build/linux && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin/clean
 .PHONY : clean
 
 # The main clean target
@@ -162,44 +162,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /mnt/c/dev/c_cpp/CMakeProject1/build/linux && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /mnt/c/dev/c_cpp/CMakeProject1/build/linux && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/dev/c_cpp/CMakeProject1/build/linux && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named CMakeProject1
+# Convenience name for target.
+bin/CMakeFiles/CMakeProject1.dir/rule:
+	cd /mnt/c/dev/c_cpp/CMakeProject1/build/linux && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin/CMakeFiles/CMakeProject1.dir/rule
+.PHONY : bin/CMakeFiles/CMakeProject1.dir/rule
 
-# Build rule for target.
-CMakeProject1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeProject1
+# Convenience name for target.
+CMakeProject1: bin/CMakeFiles/CMakeProject1.dir/rule
+
 .PHONY : CMakeProject1
 
 # fast build rule for target.
 CMakeProject1/fast:
-	$(MAKE) $(MAKESILENT) -f bin/CMakeFiles/CMakeProject1.dir/build.make bin/CMakeFiles/CMakeProject1.dir/build
+	cd /mnt/c/dev/c_cpp/CMakeProject1/build/linux && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/CMakeProject1.dir/build.make bin/CMakeFiles/CMakeProject1.dir/build
 .PHONY : CMakeProject1/fast
 
-#=============================================================================
-# Target rules for targets named include-header
+main.o: main.cpp.o
 
-# Build rule for target.
-include-header: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include-header
-.PHONY : include-header
+.PHONY : main.o
 
-# fast build rule for target.
-include-header/fast:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/include-header.dir/build.make lib/CMakeFiles/include-header.dir/build
-.PHONY : include-header/fast
+# target to build an object file
+main.cpp.o:
+	cd /mnt/c/dev/c_cpp/CMakeProject1/build/linux && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/CMakeProject1.dir/build.make bin/CMakeFiles/CMakeProject1.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /mnt/c/dev/c_cpp/CMakeProject1/build/linux && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/CMakeProject1.dir/build.make bin/CMakeFiles/CMakeProject1.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /mnt/c/dev/c_cpp/CMakeProject1/build/linux && $(MAKE) $(MAKESILENT) -f bin/CMakeFiles/CMakeProject1.dir/build.make bin/CMakeFiles/CMakeProject1.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -214,7 +230,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... CMakeProject1"
-	@echo "... include-header"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
@@ -226,6 +244,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/dev/c_cpp/CMakeProject1/build/linux && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

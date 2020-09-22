@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libinclude-header.a"
+			"path" : "lib/libinclude-header.a"
 		}
 	],
 	"backtrace" : 1,
@@ -11,11 +11,13 @@
 	{
 		"commands" : 
 		[
-			"add_library"
+			"add_library",
+			"target_compile_definitions",
+			"target_include_directories"
 		],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"include/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -25,7 +27,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 19,
+				"line" : 1,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 7,
 				"parent" : 0
 			}
 		]
@@ -39,6 +53,20 @@
 					"fragment" : "-g"
 				}
 			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 2,
+					"define" : "SAY_HELLOVERSION=1"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/mnt/c/dev/c_cpp/CMakeProject1/include/."
+				}
+			],
 			"language" : "CXX",
 			"sourceIndexes" : 
 			[
@@ -46,13 +74,13 @@
 			]
 		}
 	],
-	"id" : "include-header::@6890427a1f51a3e7e1df",
+	"id" : "include-header::@306ed2d68c6501e8728f",
 	"name" : "include-header",
 	"nameOnDisk" : "libinclude-header.a",
 	"paths" : 
 	{
-		"build" : ".",
-		"source" : "."
+		"build" : "lib",
+		"source" : "include"
 	},
 	"sourceGroups" : 
 	[

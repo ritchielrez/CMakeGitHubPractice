@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/CMakeProject1.dir/main.cpp.o -o CMakeProject1  ../lib/libinclude-header.a 

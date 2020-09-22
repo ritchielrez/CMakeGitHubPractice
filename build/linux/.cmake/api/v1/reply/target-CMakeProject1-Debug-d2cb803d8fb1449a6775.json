@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "CMakeProject1"
+			"path" : "bin/CMakeProject1"
 		}
 	],
 	"backtrace" : 1,
@@ -12,12 +12,11 @@
 		[
 			"add_executable",
 			"install",
-			"target_link_libraries",
-			"target_include_directories"
+			"target_link_libraries"
 		],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"src/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -27,25 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 25,
+				"line" : 1,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 30,
+				"line" : 5,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 28,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 0,
-				"line" : 27,
+				"line" : 3,
 				"parent" : 0
 			}
 		]
@@ -59,11 +52,18 @@
 					"fragment" : "-g"
 				}
 			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 3,
+					"define" : "SAY_HELLOVERSION=1"
+				}
+			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
-					"path" : "/mnt/c/dev/c_cpp/CMakeProject1/./include"
+					"backtrace" : 3,
+					"path" : "/mnt/c/dev/c_cpp/CMakeProject1/include/."
 				}
 			],
 			"language" : "CXX",
@@ -77,10 +77,10 @@
 	[
 		{
 			"backtrace" : 3,
-			"id" : "include-header::@6890427a1f51a3e7e1df"
+			"id" : "include-header::@306ed2d68c6501e8728f"
 		}
 	],
-	"id" : "CMakeProject1::@6890427a1f51a3e7e1df",
+	"id" : "CMakeProject1::@90a2315b7a9c97cd24d2",
 	"install" : 
 	{
 		"destinations" : 
@@ -109,7 +109,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "libinclude-header.a",
+				"fragment" : "../lib/libinclude-header.a",
 				"role" : "libraries"
 			}
 		],
@@ -119,8 +119,8 @@
 	"nameOnDisk" : "CMakeProject1",
 	"paths" : 
 	{
-		"build" : ".",
-		"source" : "."
+		"build" : "bin",
+		"source" : "src"
 	},
 	"sourceGroups" : 
 	[

@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 
 inline int add(int num1, int num2)
 {

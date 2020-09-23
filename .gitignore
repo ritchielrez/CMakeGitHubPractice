@@ -1,3 +1,4 @@
 .DS_Store
-/.vs/*
-/.vscode/*
+.vs/*
+.vscode/*
+build/win32/.vs/*

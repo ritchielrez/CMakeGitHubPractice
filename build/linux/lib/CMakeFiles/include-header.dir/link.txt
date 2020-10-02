@@ -1,2 +1,0 @@
-/usr/bin/ar qc libinclude-header.a CMakeFiles/include-header.dir/header.cpp.o
-/usr/bin/ranlib libinclude-header.a

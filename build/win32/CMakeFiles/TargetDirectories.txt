@@ -1,7 +1,0 @@
-C:/dev/c_cpp/CMakeProject1/build/win32/CMakeFiles/INSTALL.dir
-C:/dev/c_cpp/CMakeProject1/build/win32/CMakeFiles/ALL_BUILD.dir
-C:/dev/c_cpp/CMakeProject1/build/win32/CMakeFiles/ZERO_CHECK.dir
-C:/dev/c_cpp/CMakeProject1/build/win32/bin/CMakeFiles/CMakeProject1.dir
-C:/dev/c_cpp/CMakeProject1/build/win32/bin/CMakeFiles/INSTALL.dir
-C:/dev/c_cpp/CMakeProject1/build/win32/lib/CMakeFiles/include-header.dir
-C:/dev/c_cpp/CMakeProject1/build/win32/lib/CMakeFiles/INSTALL.dir

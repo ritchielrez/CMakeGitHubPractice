@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/CMakeGitHubPractice/include/header.cpp
+header.h
+/workspaces/CMakeGitHubPractice/include/header.h
+
+/workspaces/CMakeGitHubPractice/include/header.h
+iostream
+-
+string
+-
+

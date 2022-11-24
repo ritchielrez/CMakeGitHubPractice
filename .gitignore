@@ -2,4 +2,5 @@
 .vs/*
 .vscode/*
 build/win32/.vs/*
+build/*
 bin/*
